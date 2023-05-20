@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;800&display=swap');
+
+
+.container{
+    font-family: "Nunito Sans";
+    width: 1440px;
+    margin: 0 auto;
+
+}
+
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 75px;
+    row-gap: 65px;
+}

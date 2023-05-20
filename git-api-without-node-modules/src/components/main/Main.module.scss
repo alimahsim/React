@@ -1,0 +1,115 @@
+.main {
+  max-width: 730px;
+  max-height: 444px;
+  padding: 48px;
+  background-color: #1e2a47;
+  border-radius: 15px;
+  display: flex;
+  column-gap: 37px;
+  // align-items: center;
+  // justify-content: space-between;
+  .main-right {
+    // background-color: #b44949;
+  }
+  .main-left {
+    .main-left_head {
+      // height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      .main-left_head__name {
+        font-weight: 900;
+        font-size: 26px;
+        color: #ffffff;
+      }
+      .main-left_head__time {
+        font-size: 15px;
+      }
+    }
+    .main-left_username {
+      width: 79px;
+      height: 24px;
+      font-size: 16px;
+      color: #0079ff;
+      margin-bottom: 20px;
+    }
+    .main-left_disc {
+      font-size: 15px;
+      color: #ffffff;
+      margin-bottom: 32px;
+    }
+    .main-left_center {
+      width: 480px;
+      height: 85px;
+      border-radius: 10px;
+      background-color: #141d2f;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-bottom: 37px;
+      .main-left_center__repos {
+        // background-color: #dc6f6f;
+        .main-left_center__repos___text {
+          font-size: 13px;
+          padding-bottom: 8px;
+        }
+        .main-left_center__repos___num {
+          font-weight: 900;
+          font-size: 22px;
+        }
+      }
+      .main-left_center__followers{
+        .main-left_center__followers___text{
+            font-size: 13px;
+            padding-bottom: 8px;
+        }
+        .main-left_center__followers___num{
+            font-weight: 900;
+            font-size: 22px;
+        }
+      }
+      .main-left_center__following{
+        // background-color: #57d23f;
+        .main-left_center__following___text{
+            padding-bottom: 8px;
+            font-size: 13px;
+        }
+        .main-left_center__following___num{
+            font-size: 22px;
+            font-weight: 900;
+        }
+      }
+    }
+    .main-left_footer{
+        display: flex;
+        justify-content: space-between;
+        .main-left_footer__left{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            .main-left_footer__left___location{
+                display: flex;
+                column-gap:20px;
+            }
+            .main-left_footer__left___blog{
+                display: flex;
+                column-gap: 20px;
+            }
+        }
+        .main-left_footer__right{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            .main-left_footer__right___social{
+                display: flex;
+                column-gap:20px;
+            }
+            .main-left_footer__right___company{
+                display: flex;
+                column-gap:20px;
+            }
+        }
+    }
+  }
+}

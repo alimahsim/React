@@ -1,0 +1,39 @@
+.error-main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h1{
+        font-size: 100px;
+        line-height: 130px;
+        line-height: 107%;
+        color:#2B3844;
+        padding-bottom: 8px;
+    }
+    h5{
+        font-size: 22px;
+        line-height: 24px;
+        line-height: 90%;
+        color: #2B3844;
+        padding-bottom: 12px;
+    }
+    p{
+        font-size: 18px;
+        line-height: 24px;
+        line-height: 110%;
+        color: #2B3844;
+        padding-bottom: 35px;
+    }
+    button{
+        width: 160px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 900;
+        color: #41B64D;
+        border: 1px solid #41B64D;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+}

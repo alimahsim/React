@@ -1,0 +1,29 @@
+.card-main{
+    width: 264px;
+    height: 336px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+    border-radius: 5px;
+    img{
+        width: 264px;
+        height: 160px;
+    }
+    .text{
+        padding-left: 24px;
+        h1{
+            font-size: 18px;
+            line-height: 26px;
+            color: #111517;
+        }
+        p{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #111517;
+            span{
+                font-weight: 700;
+                padding-right: 5px;
+            }
+        }
+    }
+}

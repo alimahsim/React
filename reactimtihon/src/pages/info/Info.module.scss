@@ -1,0 +1,41 @@
+.info-main{
+    .back-icon{
+        display: flex;
+        column-gap: 13px;
+     }
+    .info-main_content{
+        display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        background-color: rgba(127, 255, 212, 0.549);
+        .info-main_content__book-photo{
+            background-color: #83d872;
+            &:first-child{
+                padding: 24px 32px 0 24px;
+            }
+            .social-status{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #d03d3d;
+                & > div{
+                    padding-top: 38px;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+        }
+        .info-main_content__book-info{
+            background-color: #e0e462;
+        }
+        .info-main_content_book-author{
+            background-color: #80c9dd;
+        }
+    }
+}
+ 
+.info-cards{
+    display: flex;
+    
+}

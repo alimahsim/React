@@ -1,0 +1,33 @@
+.wrapper{
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    list-style: none;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 7px;
+    color: #FF0000;
+    background-color: #0c0c0cdd;
+}
+
+button{
+    background-color: #000;
+    color: #FF0000;
+    padding: 7px 16px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 16px;
+}
+input{
+    padding: 7px 16px;
+    outline: 0;
+    border: 2px solid #000;
+    border-radius: 5px;
+    color: #FF0000;
+    font-weight: 700;
+    font-size: 16px;
+}
+::-webkit-input-placeholder {
+    color: rgba(255, 0, 0, 0.502);
+}

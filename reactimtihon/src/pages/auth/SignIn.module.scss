@@ -1,0 +1,102 @@
+main{
+    // background-color: #b3e6d885;
+    display: flex;
+    // align-items: flex-start;
+    justify-content: center;
+    padding: 120px 0;
+    .main-form{
+        width: 585px;
+        height: 550px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        .main-form_header{
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 39px;
+            color: #2B3844;
+            padding-bottom: 40px;
+        }
+        .main-form_address{
+            padding-bottom: 30px;
+            p{
+                font-style: Regular;
+                font-size: 15px;
+                line-height: 22px;
+                line-height: 121%;
+                color:#ACB6BE;
+                padding-bottom: 12px;
+            }
+            input{
+                width: 400px;
+                height: 48px;
+                border: 1px solid #E9EDF4;
+                border-radius: 5px;
+                outline: 0;
+               
+            }
+        }
+        .main-form_password{
+            padding-bottom: 35px;
+            p{
+                font-style: Regular;
+                font-size: 15px;
+                line-height: 22px;
+                line-height: 121%;
+                color:#ACB6BE;
+                padding-bottom: 12px;
+            }
+            input{
+                width: 400px;
+                height: 48px;
+                border: 1px solid #E9EDF4;
+                border-radius: 5px;
+                outline: 0;
+            }
+        }
+        button{
+            width: 400px;
+            height: 48px;
+            background-color: #41B64D;
+            color: #FFF;
+            border-radius: 5px;
+            outline: 0;
+            border: none;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        .main-form_forget{
+            padding-top: 30px;
+            display: flex;
+            column-gap: 47px;
+            // background-color: #903a3a;
+            p{
+                font-size: 15px;
+                line-height: 22px;
+                line-height: 121%;
+                color:#ACB6BE;
+            }
+            p:nth-child(even){
+                span{
+                    color:#41B64D;
+                }
+            }
+        }
+    }
+    .main-left{
+        padding: 0 0 55px 55px;
+        display: flex;
+        align-items: flex-end;
+        width: 585px;
+        height: 550px;
+        background-color: #41B64D;
+        font-size: 28px;
+        line-height: 34px;
+        // line-height: 100%;
+        color: #FFFFFF;
+        background-image: url("../../assets/big-oval.png"), url("../../assets/middle-oval.png"), url("../../assets/small-oval.png");
+        background-repeat: no-repeat;
+        background-position: left top, left top, 400px 400px;
+    }
+}
