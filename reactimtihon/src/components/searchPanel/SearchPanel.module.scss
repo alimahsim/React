@@ -1,0 +1,18 @@
+.searching{
+    width: 890px;
+    height: 58px;
+    background-color: #fff;
+    padding: 16px 32px 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 40px;
+    margin: 40px 104px;
+    .searching-left{
+        font-family: Inter;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 26px;
+        color: #41B64D;
+    }
+}

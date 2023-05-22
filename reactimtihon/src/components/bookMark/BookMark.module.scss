@@ -1,0 +1,50 @@
+.book-mark-wrapper{
+    width: 342px;
+    height: 100vh;
+    // background-color: #71aee380;
+    .book-mark-content{
+        padding: 28px;
+        .title{
+            font-family: Inter;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 35px;
+            color: #212B36;
+            padding: 50px 0 28px 4px;  
+        }
+        .book-mark-card{
+            padding: 0;
+            width: 288px;
+            display: flex; 
+            column-gap: 25px;
+            background-color: rgba(65, 182, 77, 0.25);
+            border-radius: 10px;
+
+            img:first-child{
+                width: 75px;
+                height: 99px;
+                padding: 10px 0 10px 14px;
+            }
+            .card-text{
+                // padding: 18px 14px 18px 0;
+               h5{
+                font-family: Inter;
+                font-style: Medium;
+                font-size: 20px;
+                line-height: 26px;
+                color:#2B3844;
+                padding: 10px 6px 6px 0   ;
+               }
+               p{
+                font-size: 15px;
+                color: #2B3844;
+                padding: 0 14px 6px 0;
+               }
+               img{
+                padding: 0 12px 6px 0;
+               }
+
+            } 
+        }
+    }
+}

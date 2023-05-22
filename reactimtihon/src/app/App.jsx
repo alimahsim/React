@@ -11,16 +11,17 @@ function App() {
       {/* <Header></Header> */}
       <Routes>
         <Route path="/" element={<Homepage/>}></Route>
-        <Route path="/gen" element={<General/>}></Route>
         <Route path="/sign" element={<SignIn/>}></Route>
-        <Route path="/error" element={<Error404/>}></Route>
+        <Route path="/gen" element={<General/>}></Route>
+        <Route path="/info" element={<Info/>}></Route>
+        <Route path="*" element={<Error404/>}></Route>
       </Routes>
       {/* <Header></Header> */}
       {/* <Homepage></Homepage> */}
       {/* <General></General>  */}
       {/* <Error404></Error404> */}
       {/* <SignIn></SignIn> */}
-      <Info></Info>
+      {/* <Info></Info> */}
     </div>
   )
 }
