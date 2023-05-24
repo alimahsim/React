@@ -1,4 +1,9 @@
 .card-list-content{
     display: flex;
-    background-color: #ecf14d;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 24px;
+    row-gap: 24px;
+    padding-left: 39px;
 }

@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 import s from "./SignIn.module.scss"
-import { redirect } from "react-router-dom"
+// import { redirect } from "react-router-dom"
 
 export const SignIn = () => {
   const [ email, setEmail ] = useState("")
@@ -10,14 +10,30 @@ export const SignIn = () => {
   const [ error, setError ] = useState("")
   const navigate = useNavigate()
   
+  
   const onSubmit = e =>{
-    e.preventDefault()
-    if (email === "eve.holt@reqres.in" && password === "pistol"){
-      navigate("/gen")
+  const req = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({  
+        "email": email,
+        "password": password  } 
+        )
+  };
+  fetch('https://reqres.in/api/login', req)
+      .then(response => response.json())
+      .then(data =>{
+        console.log(data);
+        localStorage.setItem('token'  , data.token)
+      });
+  e.preventDefault()
+    if (localStorage.getItem('token') === "QpwL5tke4Pnpja7X4"){
+      navigate("/")
       setError("")
     }else{
-      setError("Chek your email or password and try again")
+      setError("Invaid input! Chek your email or password and try again")
     }
+    console.log(localStorage.getItem('token'));
   }
   return (
     <main>
@@ -33,7 +49,7 @@ export const SignIn = () => {
             <input type="password" placeholder="" onChange={({target})=>setPassword(target.value)} />
           </div>
           <div className={s["for-error"]}>{error}</div>
-          <button onClick={onSubmit} type="button">Sign In</button>
+          <button onClick={onSubmit} type="button"> Sign In</button>
           <div className={s["main-form_forget"]}>
             <p>Forget Password?</p>
             <p>Don't have an account?<span>Sign Up</span></p>
@@ -48,3 +64,4 @@ export const SignIn = () => {
     </main>
   )
 }
+

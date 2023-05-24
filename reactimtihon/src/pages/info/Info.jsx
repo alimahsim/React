@@ -1,3 +1,6 @@
+import { Header } from "../../components/index"
+
+
 import arrow from "../../assets/back-arrow-icon.png";
 import bookPhoto from "../../assets/Don't-make-me-think.jpg";
 import texting from "../../assets/patterns/texting.svg";
@@ -25,7 +28,7 @@ import s from "./Info.module.scss";
 export const Info = () => {
   return (
     <>
-      <h1>Hello Info</h1>
+      <Header></Header>
       <div className={s["info-main"]}>
         <div className={s["back-icon"]}>
           <img src={arrow} alt="There is an back-arrow icon" />

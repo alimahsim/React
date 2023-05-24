@@ -7,18 +7,19 @@ import heardIcon from "../../assets/heard-icon.png"
 import s from "./CardListItem.module.scss"
 
 
-export const CardListItem = () => {
+export const CardListItem = (props) => {
+  const { img, title, author, createdAt, rate, like, getName } = props
   return (
     <>
       <div className={s["card-list-item-wrapper"]}>
         <div className={s["card-list-item-content"]}>
-          <img src={bookPhoto} alt="There is a photo of the book" />
-          <div className={s["title"]}>Don’t Make Me think</div>
-          <div className={s["author"]}>Steve Krug, 2000</div>
-          <div className={s["rating"]}>4.5 <span>/5</span>
-            <img src={ heardIcon } alt="There is an icon of the small full heard" />
+          <img src={img} alt="There is a photo of the book" />
+          <div className={s["title"]}>{title}</div>
+          <div className={s["author"]}>{author}, {createdAt}</div>
+          <div className={s["rating"]}>{rate}<span>/5</span>
+            < img src={ heardIcon } alt="There is an icon of the small full heard" />
           </div>
-          <div className={s["btns"]}>\
+          <div className={s["btns"]}>
             <Link to="/info">Info</Link>
             <Link href="#">Read</Link>
           </div>
