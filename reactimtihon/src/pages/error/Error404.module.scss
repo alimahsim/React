@@ -26,7 +26,7 @@
         color: #2B3844;
         padding-bottom: 35px;
     }
-    button{
+    .go-home-btn{
         width: 160px;
         height: 50px;
         font-size: 16px;
@@ -35,5 +35,8 @@
         border: 1px solid #41B64D;
         border-radius: 5px;
         background-color: #fff;
+        display: flex;align-items: center;justify-content: center;
+        text-decoration: none;
+
     }
 }

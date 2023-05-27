@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-:root {
-  line-height: 1.5;
-  font-weight: 400;
-}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Inter;
 }
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  --orange: #F27851;
+  --text: #FFF;
+}
+// body.light{
+//   --bg-main: #1E1E1E;
+//   --bg-secondary: #2B3844;
+  
+// }
+
+// body.dark{
+// }

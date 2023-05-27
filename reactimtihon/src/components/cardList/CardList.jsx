@@ -1,27 +1,43 @@
 import React from 'react'
 import {useState, useEffect } from 'react' 
 
-import { CardListItem } from '../cardListItem/CardListItem'
+import { CardListItem, EmptyCard } from '../index'
 import getData from "../../resourse/bookInfo"
 
 import s from "./CardList.module.scss"
 
-export const CardList = (img, title, author, createdAt, rate, like, props, getName) => {
-  const [data, setData] = useState(null);
-
+export const CardList = ({img, title, author, createdAt, rate, like, getName, temp}) => {
+  const [books, setBooks] = useState([]);
   useEffect(() => {
     getData('https://owabooks.vercel.app/db.json')
-    .then((data) => {
-      setData(data) 
-    })
+    .then(setBooks)
   }, []);
 
+console.log(books);
+
+  const searchItem = (word, data) => {
+    if(word){
+      return data.filter((info)=>{
+        return info.title.toLowerCase().includes(word.toLowerCase())
+      })
+    }else{
+      return data
+    }
+  }
+
+// let { books, word } = useState;
+let newBooks = searchItem(temp, books)
   return (
     <>
       <div className={s["card-list-content"]}>
         {
-          data?.map((item)=>{
+          newBooks.length === 0
+          ?
+          <EmptyCard/>
+          :
+          newBooks?.map((item, i)=>{
             return <CardListItem 
+            key = {i}
             img = {item.img}
             title = {item.title}
             author = {item.author}
@@ -29,7 +45,7 @@ export const CardList = (img, title, author, createdAt, rate, like, props, getNa
             rate = {item.rate}
             like = {item.like}
             />
-          })
+          })          
         }
       </div>
     </>

@@ -3,7 +3,7 @@ main{
     display: flex;
     // align-items: flex-start;
     justify-content: center;
-    padding: 120px 0;
+    padding: 80px 0;
     .main-form{
         width: 585px;
         height: 550px;
@@ -34,7 +34,7 @@ main{
                 border: 1px solid #E9EDF4;
                 border-radius: 5px;
                 outline: 0;
-               
+                padding-left: 10px;
             }
         }
         .main-form_password{
@@ -53,6 +53,7 @@ main{
                 border: 1px solid #E9EDF4;
                 border-radius: 5px;
                 outline: 0;
+                padding-left: 10px;
             }
         }
         button{

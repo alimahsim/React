@@ -10,30 +10,29 @@ export const SignIn = () => {
   const [ error, setError ] = useState("")
   const navigate = useNavigate()
   
-  
-  const onSubmit = e =>{
+const onSubmit = e =>{
+  e.preventDefault()
   const req = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({  
-        "email": email,
-        "password": password  } 
-        )
+        email: "eve.holt@reqres.in",
+        password: "cityslicka"
+      })
   };
   fetch('https://reqres.in/api/login', req)
       .then(response => response.json())
       .then(data =>{
-        console.log(data);
-        localStorage.setItem('token'  , data.token)
+        localStorage.setItem("token", data.token)
       });
-  e.preventDefault()
-    if (localStorage.getItem('token') === "QpwL5tke4Pnpja7X4"){
-      navigate("/")
+    if (localStorage.getItem("token") === 'QpwL5tke4Pnpja7X4'){
+      navigate("/home")
       setError("")
     }else{
+      // navigate("/sign-in")
       setError("Invaid input! Chek your email or password and try again")
     }
-    console.log(localStorage.getItem('token'));
+    // console.log(localStorage.getItem('token'));
   }
   return (
     <main>
@@ -42,11 +41,11 @@ export const SignIn = () => {
           <div className={s["main-form_header"]}>Sign In</div>
           <div className={s["main-form_address"]}>
             <p>Email Address</p>
-            <input type="text" placeholder="" onChange={({target})=>setEmail(target.value)} />
+            <input type="email" placeholder="Example: eve.holt@reqres.in" onChange={({target})=>setEmail(target.value)} />
           </div>
           <div className={s["main-form_password"]}>
             <p>Your Password</p>
-            <input type="password" placeholder="" onChange={({target})=>setPassword(target.value)} />
+            <input type="password" placeholder="Example: cityslicka" onChange={({target})=>setPassword(target.value)} />
           </div>
           <div className={s["for-error"]}>{error}</div>
           <button onClick={onSubmit} type="button"> Sign In</button>

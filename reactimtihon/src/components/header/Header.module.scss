@@ -3,10 +3,8 @@ header {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-//   background-color: #e49191;
   height: 100px;
-  // box-shadow: rgba(0, 0, 0, 0.25);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid #E4E4E4;
 
   .header-right {
     display: flex;
@@ -16,14 +14,30 @@ header {
     display: flex;
     align-items: center;
     column-gap: 32px;
-    button {
+    // background-color: #3ab95e;
+    img:nth-child(1){
+      display: block;
+    }
+    img:nth-child(1).active{
+      display: none;
+    }
+    img:nth-child(2){
+      display: none;
+    }
+    img:nth-child(2).active{
+      display: block;
+    }
+    .log-out{
       width: 139px;
       height: 48px;
       border-radius: 6px;
       background: #41b64d;
       color: #fff;
-      // outline: 0;
       border: 0;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

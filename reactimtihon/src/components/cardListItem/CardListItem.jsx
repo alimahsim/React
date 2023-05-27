@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
-import bookPhoto from "../../assets/Don't-make-me-think.jpg"
+// import bookPhoto from "../../assets/Don't-make-me-think.jpg"
 import heardIcon from "../../assets/heard-icon.png"
 
 import s from "./CardListItem.module.scss"
@@ -20,7 +20,7 @@ export const CardListItem = (props) => {
             < img src={ heardIcon } alt="There is an icon of the small full heard" />
           </div>
           <div className={s["btns"]}>
-            <Link to="/info">Info</Link>
+            <NavLink to="/home/info">Info</NavLink>
             <Link href="#">Read</Link>
           </div>
         </div>

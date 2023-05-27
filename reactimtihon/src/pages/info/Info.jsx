@@ -1,4 +1,4 @@
-import { Header } from "../../components/index"
+// import { Header } from "../../components/index"
 
 
 import arrow from "../../assets/back-arrow-icon.png";
@@ -28,7 +28,7 @@ import s from "./Info.module.scss";
 export const Info = () => {
   return (
     <>
-      <Header></Header>
+      {/* <Header></Header> */}
       <div className={s["info-main"]}>
         <div className={s["back-icon"]}>
           <img src={arrow} alt="There is an back-arrow icon" />
