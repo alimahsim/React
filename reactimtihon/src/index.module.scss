@@ -10,14 +10,29 @@
 :root {
   line-height: 1.5;
   font-weight: 400;
-  --orange: #F27851;
-  --text: #FFF;
+  --body_bg: #FFFF;
+  --main_cards_bg: #f2f2f2;
+  --main_text: #000;
+  --card_btn_pri:#41B64D;
+  --card_btn_sec:#2B3844;
+  --book_mark_bg: rgba(65, 182, 77, 0.25);
+  --title: #41B64D;
+  --text: #2B3844;
+  --white: #FFF;
 }
-// body.light{
-//   --bg-main: #1E1E1E;
-//   --bg-secondary: #2B3844;
-  
-// }
 
-// body.dark{
-// }
+[data-theme="dark"]{
+  --body_bg: #202c36;
+  --main_cards_bg: #2B3844;
+  --main_text: #FFF;
+  --card_btn_pri:#F27851;
+  --card_btn_sec:#FFF;
+  --book_mark_bg: rgba(242, 120, 81, 0.5);
+  --title: #F27851;
+  --text: rgba(255, 255, 255, 1);
+  --white: #FFF;
+}
+
+body{
+  background-color:var(--body_bg);
+}

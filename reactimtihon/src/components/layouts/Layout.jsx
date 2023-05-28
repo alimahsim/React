@@ -1,17 +1,17 @@
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { Header } from "../index";
 
 export const Layout = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   
-  // useEffect(()=>{
-  //   if(localStorage('token')){
-  //     navigate("/sign-in")
-  //   }
-  // }, [])
+  useEffect(()=>{
+    if(!localStorage.getItem( "accessToken")){
+      navigate("/sign-in")
+    }
+  }, [])
   
   return (
     <>

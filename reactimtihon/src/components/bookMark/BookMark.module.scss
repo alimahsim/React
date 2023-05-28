@@ -1,49 +1,59 @@
 .book-mark-wrapper{
     width: 342px;
-    height: 100vh;
-    // background-color: #71aee380;
+    height: 100%;
+    background-color: var(--main_cards_bg);
     .book-mark-content{
         padding: 28px;
+        
+        // height: max-content;
         .title{
             font-family: Inter;
-            font-weight: 600;
+            font-weight: 200;
             font-size: 28px;
             line-height: 35px;
-            color: #212B36;
+            color: var(--text);
             padding: 50px 0 28px 4px;  
         }
         .book-mark-card{
-            padding: 0;
             width: 288px;
+            height: max-content;
             display: flex; 
-            column-gap: 25px;
-            background-color: rgba(65, 182, 77, 0.25);
+            column-gap: 5px;
+            background-color: var(--book_mark_bg);
             border-radius: 10px;
-
-            img:first-child{
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            img{
                 width: 75px;
                 height: 99px;
-                padding: 10px 0 10px 14px;
+                padding: 10px 10px 10px 14px;
             }
             .card-text{
+                padding-top: 10px;
                 // padding: 18px 14px 18px 0;
                h5{
                 font-family: Inter;
                 font-style: Medium;
                 font-size: 20px;
                 line-height: 26px;
-                color:#2B3844;
+                color:var(--text);
                 padding: 10px 6px 6px 0   ;
                }
                p{
                 font-size: 15px;
-                color: #2B3844;
+                color:var(--text);
                 padding: 0 14px 6px 0;
                }
-               img{
-                padding: 0 12px 6px 0;
+               .full-head{
+                   width: 15px;
+                   height: 14px;
+                   // fill: var()   
+                   padding: 0 12px 6px 0;
+                //    svg{
+                //     // display: block;
+                //     // background-color: #4f3cca;
+                //    }
                }
-
             } 
         }
     }

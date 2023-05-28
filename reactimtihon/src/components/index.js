@@ -6,12 +6,8 @@ export { CardList } from "./cardList/CardList"
 export { CardListItem } from "./cardListItem/CardListItem"
 export { Layout } from "./layouts/Layout"
 export { EmptyCard } from "./emptyCard/EmptyCard"
-// export { ThemeMode } from "./themeMode/ThemeMode"
 
-export { Homepage } from '../pages/homepage/Homepage';
-export { Error404 } from '../pages/error/Error404';
-export { SignIn } from "../pages/auth/SignIn";
+export { Homepage } from "../pages/homepage/Homepage"
+export { Error404 } from "../pages/error/Error404"
+export { SignIn } from "../pages/auth/SignIn"
 export { Info } from "../pages/info/Info"
-
-// export { ThemeContext } from "../contexts/Theme"
-// export { ThemeProvider } from "../contexts/Theme"

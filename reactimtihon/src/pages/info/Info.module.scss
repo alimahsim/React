@@ -1,20 +1,24 @@
 .info-main {
-  background-color: #f2f2f2;
+  background-color: var(--body_bg);
   .back-icon {
+    width: max-content;
     display: flex;
     align-items: center;
     column-gap: 13px;
     font-size: 15px;
     line-height: 19px;
-    color:#2B3844;
+    color: var(--text);
     padding: 41px 0 41px 44px;
+    svg{
+      stroke: var(--text);
+    }
   }
   .info-main_content {
     display: flex;
     justify-content: space-between;
     padding: 40px 40px 70px 40px;
     .info-main_content__book-photo {
-      background-color: #FFF;
+      background-color: var( --main_cards_bg);
       border-radius: 10px;
       &:first-child {
         padding: 24px 32px 0 24px;
@@ -29,6 +33,24 @@
           align-items: center;
           flex-direction: column;
         }
+        .pending{
+          color: var(--text);
+          svg{
+            stroke: var(--text);
+          }
+        }
+        .noting{
+          color: var(--text);
+          svg{
+            stroke: var(--text);
+          }
+        }
+        .shareing{
+          color: var(--text);
+          svg{
+            stroke: var(--text);
+          }
+        }
       }
     }
     .info-main_content__book-info {
@@ -39,20 +61,20 @@
           font-style: Regular;
           font-size: 35px;
           line-height: 45px;
-          color: #2b3844;
+          color: var(--text);
           padding-bottom: 18px;
         }
         .book-author {
           font-size: 15px;
           line-height: 18px;
-          color: #2b3844;
+          color: var(--text);
           padding-bottom: 5px;
           span {
             text-decoration: underline;
           }
         }
         .edition {
-          color: #9a9a9a;
+          color: var(--text);
           padding-bottom: 20px;
         }
         .book-rating {
@@ -60,7 +82,7 @@
           font-weight: 500;
           font-size: 14px;
           line-height: 17px;
-          color: #2b3844;
+          color: var(--text);
           padding-bottom: 30px;
           .stars {
             padding-right: 10px;
@@ -68,8 +90,9 @@
           .rating {
             padding-right: 20px;
           }
-          .reading {
-          }
+          // .reading {
+          //   // background-color: #fff;
+          // }
         }
         .availability-and-status {
           display: flex;
@@ -79,7 +102,7 @@
             font-weight: 900;
             font-size: 14px;
             line-height: 17px;
-            color: #2b3844;
+            color: var(--text);
 
             // display: flex;
             // flex-direction: column;
@@ -90,10 +113,10 @@
               font-weight: 500;
               font-size: 15px;
               line-height: 23px;
-              color: #2b3844;
+              color: var(--text);
               padding: 11px 0 8px 0;
-              img {
-                // display: inline;
+              svg {
+                fill: var(--title);
               }
             }
             .e-book {
@@ -102,7 +125,8 @@
               column-gap: 8px;
               font-weight: 500;
               padding-bottom: 8px;
-              img {
+              svg{
+                fill: var(--title);
               }
             }
             .audio-book {
@@ -111,7 +135,8 @@
               column-gap: 8px;
               font-weight: 500;
               padding-bottom: 8px;
-              img {
+              svg{
+                fill: var(--title);
               }
             }
           }
@@ -120,9 +145,7 @@
             font-weight: 900;
             font-size: 14px;
             line-height: 17px;
-            color: #2b3844;
-            // flex-direction: column; // div
-            // padding-bottom: 16px;
+            color: var(--text);
             div:first-child {
               width: 85px;
               height: 26px;
@@ -185,7 +208,7 @@
     }
 
     .info-main_content_book-author {
-      background-color: #fff;
+      background-color:  var(--main_cards_bg);
       width: 445px;
       height: 300px;
       padding: 30px;
@@ -199,13 +222,20 @@
             font-weight: 600;
             font-size: 24px;
             line-height: 31px;
-            color: rgba(43, 56, 68, 1);
+            color: var(--text);
             padding-bottom: 20px;
             span {
-              color: rgba(65, 182, 77, 1);
+              color: var(--title);
+              }
             }
+            .author-name{
+              // color: red;
+              color: var(--text);
           }
         }
+      }
+      .text{
+        color: var(--text);
       }
     }
   }
@@ -213,7 +243,7 @@
     padding: 70px 40px 90px 40px;
     .info-description_content {
       padding: 30px;
-      background-color: #fff;
+      background-color: var(--main_cards_bg);
       border-radius: 10px;
       .description-title {
         width: 138px;
@@ -222,10 +252,11 @@
         font-weight: 600;
         font-size: 24px;
         line-height: 31px;
-        color: #41b64d;
+        color: var(--title);
       }
       p {
         padding-top: 30px;
+        color: var(--text);
       }
     }
   }
@@ -234,10 +265,10 @@
     font-weight: 900;
     font-size: 28px;
     line-height: 36px;
-    color: rgba(43, 56, 68, 1);
+    color: var(--text);
     padding-left: 60px;
     span {
-      color: rgba(65, 182, 77, 1);
+      color: var(--title);
     }
     // padding-bottom: 30px;
   }
@@ -247,13 +278,28 @@
     justify-content: space-around;
     padding: 30px 40px 175px 40px;
     .info-card {
-      background-color: #fff;
+      background-color: var(--main_cards_bg);
       padding: 15px;
       border-radius: 10px;
       .info-card_context {
         img {
           width: 130px;
           height: 170px;
+        }
+        .info-card_context__text{
+          h5{
+            font-size: 12px;
+            font-weight: 200;
+            color: var(--text)
+          }
+          h6{
+            font-weight: 200;
+            color: var(--title)
+          }
+          p{
+            font-size: 12px;
+            color: var(--text)
+          }
         }
       }
     }

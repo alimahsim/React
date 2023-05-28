@@ -2,19 +2,12 @@ import React from 'react'
 import {useState, useEffect } from 'react' 
 
 import { CardListItem, EmptyCard } from '../index'
-import getData from "../../resourse/bookInfo"
+
 
 import s from "./CardList.module.scss"
 
-export const CardList = ({img, title, author, createdAt, rate, like, getName, temp}) => {
-  const [books, setBooks] = useState([]);
-  useEffect(() => {
-    getData('https://owabooks.vercel.app/db.json')
-    .then(setBooks)
-  }, []);
-
-console.log(books);
-
+export const CardList = ({  books, changeLike, temp}) =>{
+  
   const searchItem = (word, data) => {
     if(word){
       return data.filter((info)=>{
@@ -25,7 +18,6 @@ console.log(books);
     }
   }
 
-// let { books, word } = useState;
 let newBooks = searchItem(temp, books)
   return (
     <>
@@ -44,6 +36,8 @@ let newBooks = searchItem(temp, books)
             date = {item.createdAt}
             rate = {item.rate}
             like = {item.like}
+            id = {item.id}
+            changeLike={changeLike}
             />
           })          
         }

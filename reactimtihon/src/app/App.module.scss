@@ -1,14 +1,20 @@
-// #root {
-//   font-family: Inter;
-//   max-width: 1440px;
-//   margin: 0 auto;
-//   background-color: #0096aa;
-//   color: #FFF;
-// }
+#root {
+  font-family: Inter;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #0096aa;
+  color: #FFF;
+  background-color: var(--body_bg);
+}
+  body{
+    background-color: var(--body_bg);
+  }
 .app-wrapper{
   max-width: 1440px;
   margin: 0 auto;
   user-select: none;
+  
+  background-color: var(--body_bg);
   // background-color: #7d9ca067;
   // color: #FFF;
 }

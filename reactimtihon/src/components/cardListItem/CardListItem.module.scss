@@ -1,6 +1,6 @@
 .card-list-item-wrapper{
         width: 237px;
-        background-color: #FFF;    
+        background-color: var(--main_cards_bg);    
         border-radius: 10px;
         box-sizing:border-box;
     .card-list-item-content{
@@ -12,7 +12,7 @@
             font-style: Regular;
             font-size: 20px;
             line-height: 26px;
-            color: #2B3844;
+            color: var(--text);
             padding: 12px 0 5px 0;
         }
         .author{
@@ -20,18 +20,23 @@
             font-style: Regular;
             font-size: 16px;
             line-height: 21px;
-            color:#41B64D;
+            color: var(--title);
             padding-bottom: 5px;
         }
         .rating{    
+            display: flex;
+            align-items:center;
+            justify-content: center;
             font-size: 14px;
             line-height: 18px;
-            color: rgba(77, 77, 77, 1);
+            color: var(--text);
+            // background-color: #fff;
             span{
                 color:rgba(167, 167, 167, 1);
             }
-            img{
-                padding-left: 134px;
+            svg{
+                stroke: var(--text);
+                margin-left: 134px;
             }
         }
         .btns{
@@ -46,19 +51,22 @@
                 font-style: 600;
                 font-size: 12px;
                 line-height: 16px;
-                color: #F8FAFC;
                 margin: 30px 0 4px 0;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
                 text-decoration: none;
+                color: var(--text);
+              
             }
             a:nth-child(odd){
-                background-color:#2B3844;
+                color: var(--title);
+                background-color:var(--card_btn_sec);   
             }
             a:nth-child(even){
-                background-color:#41B64D;
+                color: var(--text);
+                background-color:var(--card_btn_pri);
             }
         }
     }
